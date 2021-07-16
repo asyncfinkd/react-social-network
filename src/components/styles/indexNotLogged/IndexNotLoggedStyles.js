@@ -109,15 +109,22 @@ export const FooterContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
+
+  @media (max-width: 800px) {
+    justify-content: center;
+  }
 `;
 
 export const FooterSVG = styled.div`
   display: flex;
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export const FooterSVGElement = styled.svg`
   display: block;
-  vertical-align: middle;
   cursor: ${(props) => props.active && "pointer"};
   margin-left: ${(props) => props.active && "10px"};
 `;
