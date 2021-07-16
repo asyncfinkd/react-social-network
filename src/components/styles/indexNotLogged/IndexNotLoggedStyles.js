@@ -164,7 +164,7 @@ export const GridContainer__ContentTitle = styled.h1`
   text-align: center;
   color: ${(props) => (props.active ? "#fd4d4d" : "#dee3ea")};
   font-family: ${(props) => (props.active ? "Inter-Regular" : "Inter-Bold")};
-  font-size: ${(props) => (props.active ? "1.2rem" : "1.875rem")};
+  font-size: ${(props) => (props.active ? "1rem" : "1.875rem")};
   font-weight: 700;
   margin-top: ${(props) => props.active && "1rem"};
   cursor: ${(props) => props.active && "pointer"};
