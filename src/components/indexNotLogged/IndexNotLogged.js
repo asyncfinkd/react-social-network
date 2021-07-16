@@ -35,9 +35,11 @@ export default function IndexNotLogged() {
                 Login
               </Styled.GridContainer__Content__Button>
             </Link>
-            <Styled.GridContainer__Content__Button>
-              Create New Account
-            </Styled.GridContainer__Content__Button>
+            <Link to="/signup">
+              <Styled.GridContainer__Content__Button>
+                Create New Account
+              </Styled.GridContainer__Content__Button>
+            </Link>
           </Styled.GridContainer__ContentWith__Buttons>
           <Styled.GridContainer__ForgotPassword__Container>
             Forgotten password?

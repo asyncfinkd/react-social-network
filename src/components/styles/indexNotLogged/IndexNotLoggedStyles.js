@@ -242,3 +242,25 @@ export const GridContainer__ContentInput__Tooltip__Span = styled.span`
   display: flex;
   align-items: center;
 `;
+
+export const GridContainerBoth__InputsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+`;
+
+export const GridContainerBoth__Input = styled.input`
+  width: 100%;
+  height: 44px;
+  background-color: transparent;
+  border: 1px solid #242c37;
+  border-radius: 5px;
+  padding-left: 10px;
+  color: #dee3ea;
+  transition: all 0.1s ease;
+
+  &:focus {
+    border: 1px solid #fd4d4d;
+    box-shadow: 0 0 0 0.12rem rgba(253, 77, 77, 0.6);
+  }
+`;

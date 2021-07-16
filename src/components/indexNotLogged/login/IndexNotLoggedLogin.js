@@ -53,6 +53,7 @@ export default function IndexNotLoggedLogin() {
                 ref={inputs.emailRef}
                 value={inputs.email}
                 onChange={handleChange}
+                autoFocus
                 name="email"
                 autoComplete="off"
                 autoCapitalize="off"
@@ -90,9 +91,9 @@ export default function IndexNotLoggedLogin() {
               Login
             </Styled.GridContainer__ContentInputButton>
             <Link to="/">
-              <Styled.GridContainer__ContentTitle active>
-                Back Home
-              </Styled.GridContainer__ContentTitle>
+              <Styled.GridContainer__ForgotPassword__Container>
+                Forgotten password?
+              </Styled.GridContainer__ForgotPassword__Container>
             </Link>
           </Styled.GridContainer__Content>
           <IndexNotLoggedFooter />
