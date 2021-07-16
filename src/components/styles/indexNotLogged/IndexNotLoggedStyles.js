@@ -206,3 +206,39 @@ export const GridContainer__ContentInputButton = styled.button`
     opacity: 0.8;
   }
 `;
+
+export const GridContainer__ContentInput__Tooltip = styled.div`
+  position: absolute;
+  right: 0;
+  top: -35px;
+  background-color: #fd4d4d;
+  color: #dee3ea;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #fd4d4d;
+    width: 10px;
+    height: 10px;
+    bottom: -3px;
+    right: 10px;
+    transform: rotate(45deg);
+  }
+`;
+
+export const GridContainer__ContentInput__Tooltip__Span = styled.span`
+  color: #dee3ea;
+  font-size: 12px;
+  min-height: 15px;
+  font-weight: 300;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+`;
