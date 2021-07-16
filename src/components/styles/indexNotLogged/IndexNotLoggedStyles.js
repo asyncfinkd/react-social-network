@@ -2,10 +2,13 @@ import styled from "styled-components";
 
 export const GridContainer = styled.div`
   width: 100%;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (min-width: 800px) {
+    height: 100vh;
+  }
 `;
 
 export const GridContainer__Content = styled.div`
