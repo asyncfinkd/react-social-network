@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import * as Styled from "../styles/indexNotLogged/IndexNotLoggedStyles";
 import IndexNotLoggedFooter from "./footer/IndexNotLoggedFooter";
 
 export default function IndexNotLogged() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <>
       <Styled.GridContainer>
@@ -24,9 +30,11 @@ export default function IndexNotLogged() {
             </Styled.GridContainer__Content__Description>
           </Styled.GridContainer__Content__Child>
           <Styled.GridContainer__ContentWith__Buttons>
-            <Styled.GridContainer__Content__Button>
-              Login
-            </Styled.GridContainer__Content__Button>
+            <Link to="/login">
+              <Styled.GridContainer__Content__Button>
+                Login
+              </Styled.GridContainer__Content__Button>
+            </Link>
             <Styled.GridContainer__Content__Button>
               Create New Account
             </Styled.GridContainer__Content__Button>

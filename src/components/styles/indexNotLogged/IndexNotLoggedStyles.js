@@ -19,6 +19,7 @@ export const GridContainer__Content = styled.div`
   gap: 30px;
   border-radius: 8px;
   height: 424px;
+  width: 100%;
   z-index: 10;
   margin: auto;
 
@@ -70,6 +71,7 @@ export const GridContainer__Content__Button = styled.button`
   padding-bottom: 17.5px;
   margin-top: 10px;
   font-size: 1rem;
+  width: 100%;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -156,4 +158,51 @@ export const FooterSecond__Container__ForIcons = styled.div`
   display: flex;
   flex-direction: row;
   gap: 20px;
+`;
+
+export const GridContainer__ContentTitle = styled.h1`
+  text-align: center;
+  color: ${(props) => (props.active ? "#fd4d4d" : "#dee3ea")};
+  font-family: ${(props) => (props.active ? "Inter-Regular" : "Inter-Bold")};
+  font-size: ${(props) => (props.active ? "1.2rem" : "1.875rem")};
+  font-weight: 700;
+  margin-top: ${(props) => props.active && "1rem"};
+  cursor: ${(props) => props.active && "pointer"};
+  transition: ${(props) => props.active && "all 0.1s ease"};
+
+  &:hover {
+    opacity: ${(props) => props.active && "0.8"};
+  }
+`;
+
+export const GridContainer__ContentInput = styled.input`
+  width: 100%;
+  height: 50px;
+  border: 1px solid #242c37;
+  background-color: transparent;
+  border-radius: 5px;
+  padding-left: 10px;
+  transition: all 0.1s ease;
+  color: #dee3ea;
+
+  &:focus {
+    border: 1px solid #fd4d4d;
+    box-shadow: 0 0 0 0.12rem rgba(253, 77, 77, 0.6);
+  }
+`;
+
+export const GridContainer__ContentInputButton = styled.button`
+  border: none;
+  outline: none;
+  background-color: #fd4d4d;
+  width: 100%;
+  color: #dee3ea;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;

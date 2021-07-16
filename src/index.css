@@ -23,6 +23,10 @@ html {
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
 }
 
+a {
+  text-decoration: none;
+}
+
 #root {
   width: 100%;
 }
