@@ -31,21 +31,35 @@ export default function IndexNotLoggedSignup() {
       setLastNameError(false);
       setEmailError(false);
       setPasswordError(false);
+      inputs.firstNameRef.current.focus();
     } else if (!inputs.lastName) {
       setFirstNameError(false);
       setLastNameError(true);
       setEmailError(false);
       setPasswordError(false);
+      inputs.lastNameRef.current.focus();
     } else if (!inputs.email) {
       setFirstNameError(false);
       setLastNameError(false);
       setEmailError(true);
       setPasswordError(false);
+      inputs.emailRef.current.focus();
+    } else if (
+      !/([a-zA-Z0-9]+)([\_\.\-{1}])?([a-zA-Z0-9]+)\@([a-zA-Z0-9]+)([\.])([a-zA-Z\.]+)/g.test(
+        inputs.email
+      )
+    ) {
+      setFirstNameError(false);
+      setLastNameError(false);
+      setEmailError(true);
+      setPasswordError(false);
+      inputs.emailRef.current.focus();
     } else if (!inputs.password) {
       setFirstNameError(false);
       setLastNameError(false);
       setEmailError(false);
       setPasswordError(true);
+      inputs.passwordRef.current.focus();
     } else {
       setFirstNameError(false);
       setLastNameError(false);
@@ -62,7 +76,7 @@ export default function IndexNotLoggedSignup() {
     <>
       <form onSubmit={(e) => e.preventDefault()}>
         <Styled.GridContainer>
-          <Styled.GridContainer__Content>
+          <Styled.GridContainer__Content active>
             <Styled.GridContainer__ContentTitle>
               Sign Up
             </Styled.GridContainer__ContentTitle>
@@ -154,6 +168,9 @@ export default function IndexNotLoggedSignup() {
             <Styled.GridContainer__ContentInputButton onClick={() => submit()}>
               Sign Up
             </Styled.GridContainer__ContentInputButton>
+            <Styled.GridContainer__ForgotPassword__Container>
+              Forgotten password?
+            </Styled.GridContainer__ForgotPassword__Container>
           </Styled.GridContainer__Content>
           <IndexNotLoggedFooter />
         </Styled.GridContainer>

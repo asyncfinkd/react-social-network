@@ -16,7 +16,7 @@ export const GridContainer__Content = styled.div`
   flex-direction: column;
   background-color: var(--color-primary-800);
   padding: 40px;
-  gap: 30px;
+  gap: ${(props) => (props.active ? "20px" : "30px")};
   border-radius: 8px;
   height: 424px;
   width: 100%;
