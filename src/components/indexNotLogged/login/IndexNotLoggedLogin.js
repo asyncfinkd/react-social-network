@@ -48,10 +48,6 @@ export default function IndexNotLoggedLogin() {
             setServerErrorBool(true);
           } else {
             setServerErrorBool(false);
-            localStorage.setItem(
-              "access_token",
-              JSON.stringify(res.data.access_token)
-            );
             localStorage.setItem("user", JSON.stringify(res.data.user));
             localStorage.setItem("logged", true);
             window.location.href = "/";

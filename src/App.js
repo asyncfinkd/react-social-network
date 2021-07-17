@@ -9,7 +9,13 @@ function App() {
     <>
       <div className="loading-spinner"></div>
       <Router>
-        <Route path="/" exact component={IndexNotLoggedPages} />
+        {localStorage.getItem("logged") === "true" ? (
+          <Route path="/" exact>
+            hi
+          </Route>
+        ) : (
+          <Route path="/" exact component={IndexNotLoggedPages} />
+        )}
         <Route path="/login" exact component={IndexNotLoggedLoginPages} />
         <Route path="/signup" exact component={IndexNotLoggedSignupPages} />
       </Router>

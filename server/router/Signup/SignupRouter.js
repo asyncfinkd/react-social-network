@@ -1,8 +1,6 @@
 const router = require("express").Router();
 const LoginSchema = require("../../schema/Login/LoginSchema");
 const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
-const env = require("../../env.json");
 
 router.route("/signup").post(async (req, res) => {
   const firstName = req.body.firstName;
@@ -24,11 +22,6 @@ router.route("/signup").post(async (req, res) => {
     if (result) {
       res.json({ message: "Email is registered", success: false });
     } else {
-      const EMAIL = email;
-      const LOGGED = true;
-      const access_token = jwt.sign({ EMAIL, LOGGED }, env.ACCESS_TOKEN, {
-        expiresIn: "1h",
-      });
       const SignupSchema = new LoginSchema({
         firstName: firstName,
         lastName: lastName,
@@ -46,12 +39,11 @@ router.route("/signup").post(async (req, res) => {
           avatar: "",
           detailInformation: detailInformation,
         },
-        access_token: access_token,
         success: true,
       });
     }
   });
-  //   res.json("success");
+  res.json("success");
 });
 
 module.exports = router;

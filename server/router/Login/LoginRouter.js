@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const LoginSchema = require("../../schema/Login/LoginSchema");
 const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
 const env = require("../../env.json");
 
 router.route("/login").post(async (req, res) => {
@@ -14,11 +13,6 @@ router.route("/login").post(async (req, res) => {
     } else if (result.password.length > 0) {
       bcrypt.compare(password, result.password, (err, verified) => {
         if (verified) {
-          const EMAIL = email;
-          const LOGGED = true;
-          const access_token = jwt.sign({ EMAIL, LOGGED }, env.ACCESS_TOKEN, {
-            expiresIn: "1h",
-          });
           user = result;
           res.json({
             user: {
@@ -28,7 +22,6 @@ router.route("/login").post(async (req, res) => {
               avatar: result.avatar,
               detailInformation: result.detailInformation,
             },
-            access_token: access_token,
             success: true,
           });
         } else {
