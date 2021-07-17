@@ -14,12 +14,44 @@ export default function IndexNotLoggedSignup() {
     password: "",
     passwordRef: useRef(),
   });
+  const [firstNameError, setFirstNameError] = useState(false);
+  const [lastNameError, setLastNameError] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+  const [passwordError, setPasswordError] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInputs((prevState) => ({
       ...prevState,
       [name]: value,
     }));
+  };
+  const submit = () => {
+    if (!inputs.firstName) {
+      setFirstNameError(true);
+      setLastNameError(false);
+      setEmailError(false);
+      setPasswordError(false);
+    } else if (!inputs.lastName) {
+      setFirstNameError(false);
+      setLastNameError(true);
+      setEmailError(false);
+      setPasswordError(false);
+    } else if (!inputs.email) {
+      setFirstNameError(false);
+      setLastNameError(false);
+      setEmailError(true);
+      setPasswordError(false);
+    } else if (!inputs.password) {
+      setFirstNameError(false);
+      setLastNameError(false);
+      setEmailError(false);
+      setPasswordError(true);
+    } else {
+      setFirstNameError(false);
+      setLastNameError(false);
+      setEmailError(false);
+      setPasswordError(false);
+    }
   };
   const { pathname } = useLocation();
 
@@ -91,7 +123,7 @@ export default function IndexNotLoggedSignup() {
                 autoCorrect="off"
               />
             </div>
-            <Styled.GridContainer__ContentInputButton>
+            <Styled.GridContainer__ContentInputButton onClick={() => submit()}>
               Sign Up
             </Styled.GridContainer__ContentInputButton>
           </Styled.GridContainer__Content>
