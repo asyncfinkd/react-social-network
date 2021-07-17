@@ -7,6 +7,7 @@ import IndexNotLoggedSignupPages from "./pages/indexNotLogged/signup/IndexNotLog
 function App() {
   return (
     <>
+      <div className="loading-spinner"></div>
       <Router>
         <Route path="/" exact component={IndexNotLoggedPages} />
         <Route path="/login" exact component={IndexNotLoggedLoginPages} />

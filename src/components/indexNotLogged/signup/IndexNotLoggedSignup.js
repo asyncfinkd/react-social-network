@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import * as Styled from "../../styles/indexNotLogged/IndexNotLoggedStyles";
 import IndexNotLoggedFooter from "../footer/IndexNotLoggedFooter";
+import axios from "axios";
+import env from "../../../constants/Application/env.json";
 
 export default function IndexNotLoggedSignup() {
   const [inputs, setInputs] = useState({
@@ -17,6 +19,7 @@ export default function IndexNotLoggedSignup() {
   const [firstNameError, setFirstNameError] = useState(false);
   const [lastNameError, setLastNameError] = useState(false);
   const [emailError, setEmailError] = useState(false);
+  const [emailValidError, setEmailValidError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -31,16 +34,19 @@ export default function IndexNotLoggedSignup() {
       setLastNameError(false);
       setEmailError(false);
       setPasswordError(false);
+      setEmailValidError(false);
       inputs.firstNameRef.current.focus();
     } else if (!inputs.lastName) {
       setFirstNameError(false);
       setLastNameError(true);
       setEmailError(false);
+      setEmailValidError(false);
       setPasswordError(false);
       inputs.lastNameRef.current.focus();
     } else if (!inputs.email) {
       setFirstNameError(false);
       setLastNameError(false);
+      setEmailValidError(false);
       setEmailError(true);
       setPasswordError(false);
       inputs.emailRef.current.focus();
@@ -50,21 +56,53 @@ export default function IndexNotLoggedSignup() {
       )
     ) {
       setFirstNameError(false);
+      setEmailValidError(false);
       setLastNameError(false);
       setEmailError(true);
       setPasswordError(false);
       inputs.emailRef.current.focus();
     } else if (!inputs.password) {
       setFirstNameError(false);
+      setEmailValidError(false);
       setLastNameError(false);
       setEmailError(false);
       setPasswordError(true);
       inputs.passwordRef.current.focus();
     } else {
       setFirstNameError(false);
+      setEmailValidError(false);
       setLastNameError(false);
       setEmailError(false);
       setPasswordError(false);
+      const detailInformation = [
+        {
+          date: [
+            {
+              day: "",
+              month: "",
+              year: "",
+            },
+          ],
+          sex: "",
+        },
+      ];
+
+      axios
+        .post(`${env.host}/auth/signup`, {
+          firstName: inputs.firstName,
+          lastName: inputs.lastName,
+          email: inputs.email,
+          password: inputs.password,
+          avatar: "",
+          detailInformation: detailInformation,
+        })
+        .then((res) => {
+          if (res.data.success == false) {
+            setEmailValidError(true);
+          } else {
+            setEmailValidError(false);
+          }
+        });
     }
   };
   const { pathname } = useLocation();
@@ -140,6 +178,13 @@ export default function IndexNotLoggedSignup() {
                 <Styled.GridContainer__ContentInput__Tooltip>
                   <Styled.GridContainer__ContentInput__Tooltip__Span>
                     Required
+                  </Styled.GridContainer__ContentInput__Tooltip__Span>
+                </Styled.GridContainer__ContentInput__Tooltip>
+              )}
+              {emailValidError && (
+                <Styled.GridContainer__ContentInput__Tooltip>
+                  <Styled.GridContainer__ContentInput__Tooltip__Span>
+                    Registered
                   </Styled.GridContainer__ContentInput__Tooltip__Span>
                 </Styled.GridContainer__ContentInput__Tooltip>
               )}

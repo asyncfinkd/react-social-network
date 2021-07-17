@@ -9,17 +9,23 @@ router.route("/signup").post(async (req, res) => {
   const avatar = req.body.avatar;
   const detailInformation = req.body.detailInformation;
 
-  const SignupSchema = new LoginSchema({
-    firstName: firstName,
-    lastName: lastName,
-    email: email,
-    password: password,
-    avatar: avatar,
-    detailInformation: detailInformation,
+  let user = {};
+  LoginSchema.findOne({ email: email }).then((result) => {
+    if (result) {
+      res.json({ message: "Email is registered", success: false });
+    } else {
+      const SignupSchema = new LoginSchema({
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password,
+        avatar: avatar,
+        detailInformation: detailInformation,
+      });
+      SignupSchema.save();
+      res.json("signup success");
+    }
   });
-
-  SignupSchema.save();
-  res.json("signup success");
 });
 
 module.exports = router;

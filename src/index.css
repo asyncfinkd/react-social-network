@@ -50,3 +50,18 @@ a {
   --screen-height-reduction: 0px;
   --color-primary-100-translucent: rgba(222, 227, 234, 0.15);
 }
+
+.loading-spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #fd4d4d;
+}
+
+@media (max-width: 800px) {
+  .loading-spinner {
+    display: none;
+  }
+}

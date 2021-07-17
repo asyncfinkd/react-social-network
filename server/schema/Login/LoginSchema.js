@@ -39,7 +39,6 @@ const LoginSchema = mongoose.Schema({
   },
   avatar: {
     type: String,
-    required: true,
   },
   detailInformation: [DetailInformation],
 });
