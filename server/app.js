@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose.connect(
-  "mongodb+srv://markzuck:nikanikonika@cluster0.k2jpu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "mongodb+srv://markzuck:nikanikonika@cluster0.k2jpu.mongodb.net/doge-network?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
