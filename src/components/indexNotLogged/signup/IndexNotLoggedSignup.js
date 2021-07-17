@@ -21,6 +21,7 @@ export default function IndexNotLoggedSignup() {
   const [emailError, setEmailError] = useState(false);
   const [emailValidError, setEmailValidError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
+  const [spinner, setSpinner] = useState(true);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInputs((prevState) => ({
@@ -69,6 +70,7 @@ export default function IndexNotLoggedSignup() {
       setPasswordError(true);
       inputs.passwordRef.current.focus();
     } else {
+      setSpinner(true);
       setFirstNameError(false);
       setEmailValidError(false);
       setLastNameError(false);
@@ -103,6 +105,7 @@ export default function IndexNotLoggedSignup() {
           } else {
             setEmailValidError(false);
           }
+          setSpinner(false);
         });
     }
   };
@@ -115,7 +118,19 @@ export default function IndexNotLoggedSignup() {
     <>
       <form onSubmit={(e) => e.preventDefault()}>
         <Styled.GridContainer>
-          <Styled.GridContainer__Content active>
+          <Styled.GridContainer__Content
+            spinner={spinner}
+            active
+            style={{ position: "relative" }}
+          >
+            {spinner && (
+              <>
+                <Styled.GridContainer__SpinnerBlur></Styled.GridContainer__SpinnerBlur>
+                <Styled.GridContainer__Spinner>
+                  <Styled.GridContaner__SpinnerSpan></Styled.GridContaner__SpinnerSpan>
+                </Styled.GridContainer__Spinner>
+              </>
+            )}
             <Styled.GridContainer__ContentTitle>
               Sign Up
             </Styled.GridContainer__ContentTitle>

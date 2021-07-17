@@ -59,7 +59,10 @@ export default function IndexNotLoggedLogin() {
     <>
       <form onSubmit={(e) => e.preventDefault()}>
         <Styled.GridContainer>
-          <Styled.GridContainer__Content style={{ position: "relative" }}>
+          <Styled.GridContainer__Content
+            spinner={spinner}
+            style={{ position: "relative" }}
+          >
             {spinner && (
               <>
                 <Styled.GridContainer__SpinnerBlur></Styled.GridContainer__SpinnerBlur>

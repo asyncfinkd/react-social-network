@@ -41,6 +41,7 @@ export const GridContainer__Content = styled.div`
   gap: ${(props) => (props.active ? "20px" : "30px")};
   border-radius: 8px;
   height: 424px;
+  pointer-events: ${(props) => props.spinner && "none"};
   width: 100%;
   z-index: 10;
   margin: auto;
@@ -66,12 +67,12 @@ export const GridContainer__SpinnerBlur = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 889;
+  z-index: 999;
   width: 100%;
   border-radius: 0 0 8px 8px;
   height: 419px;
   margin-top: 2px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
 `;
 
 export const GridContaner__SpinnerSpan = styled.span`
