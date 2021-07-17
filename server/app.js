@@ -17,6 +17,9 @@ mongoose.connect(
 const Signup = require("./router/Signup/SignupRouter");
 app.use("/auth", Signup);
 
+const Login = require("./router/Login/LoginRouter");
+app.use("/auth", Login);
+
 const PORT = 3001;
 
 app.listen(PORT, () => {
