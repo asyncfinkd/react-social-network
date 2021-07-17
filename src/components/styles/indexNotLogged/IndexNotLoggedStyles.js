@@ -1,4 +1,26 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const SpinnerAnimation = keyframes`
+0% {
+    left: -35%;
+    right: 100%;
+}
+60%, 100% {
+    left: 100%;
+    right: -90%;
+}
+`;
+
+const SpinnerSecondAnimation = keyframes`
+0% {
+    left: -200%;
+    right: 100%;
+}
+60%, 100% {
+    left: 107%;
+    right: -8%;
+}
+`;
 
 export const GridContainer = styled.div`
   width: 100%;
@@ -25,6 +47,54 @@ export const GridContainer__Content = styled.div`
 
   @media (min-width: 640px) {
     width: 400px;
+  }
+`;
+
+export const GridContainer__Spinner = styled.div`
+  width: 100%;
+  height: 4px;
+  background-color: #242c37;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+`;
+
+export const GridContainer__SpinnerBlur = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 889;
+  width: 100%;
+  border-radius: 0 0 8px 8px;
+  height: 419px;
+  margin-top: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+`;
+
+export const GridContaner__SpinnerSpan = styled.span`
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 9999;
+    bottom: 0px;
+    background-color: #fd4d4d;
+    animation: 2.1s cubic-bezier(0.65, 0.81, 0.73, 0.4) 0s infinite normal none
+      running ${SpinnerAnimation};
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    background-color: #fd4d4d;
+    animation: 2.1s cubic-bezier(0.16, 0.84, 0.44, 1) 1.15s infinite normal none
+      running ${SpinnerSecondAnimation};
   }
 `;
 

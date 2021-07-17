@@ -14,6 +14,7 @@ export default function IndexNotLoggedLogin() {
   });
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
+  const [spinner, setSpinner] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInputs((prevState) => ({
@@ -31,9 +32,9 @@ export default function IndexNotLoggedLogin() {
       setPasswordError(true);
       inputs.passwordRef.current.focus();
     } else {
+      setSpinner(true);
       setEmailError(false);
       setPasswordError(false);
-
       axios
         .post(`${env.host}/auth/login`, {
           email: inputs.email,
@@ -45,6 +46,7 @@ export default function IndexNotLoggedLogin() {
           } else {
             alert(res.data.success);
           }
+          setSpinner(false);
         });
     }
   };
@@ -57,7 +59,15 @@ export default function IndexNotLoggedLogin() {
     <>
       <form onSubmit={(e) => e.preventDefault()}>
         <Styled.GridContainer>
-          <Styled.GridContainer__Content>
+          <Styled.GridContainer__Content style={{ position: "relative" }}>
+            {spinner && (
+              <>
+                <Styled.GridContainer__SpinnerBlur></Styled.GridContainer__SpinnerBlur>
+                <Styled.GridContainer__Spinner>
+                  <Styled.GridContaner__SpinnerSpan></Styled.GridContaner__SpinnerSpan>
+                </Styled.GridContainer__Spinner>
+              </>
+            )}
             <Styled.GridContainer__ContentTitle>
               Login
             </Styled.GridContainer__ContentTitle>
