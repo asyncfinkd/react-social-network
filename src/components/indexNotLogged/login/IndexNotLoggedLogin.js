@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import * as Styled from "../../styles/indexNotLogged/IndexNotLoggedStyles";
 import IndexNotLoggedFooter from "../footer/IndexNotLoggedFooter";
 import { Link, useLocation } from "react-router-dom";
+import axios from "axios";
+import env from "../../../constants/Application/env.json";
 
 export default function IndexNotLoggedLogin() {
   const [inputs, setInputs] = useState({
@@ -31,6 +33,19 @@ export default function IndexNotLoggedLogin() {
     } else {
       setEmailError(false);
       setPasswordError(false);
+
+      axios
+        .post(`${env.host}/auth/login`, {
+          email: inputs.email,
+          password: inputs.password,
+        })
+        .then((res) => {
+          if (res.data.success == false) {
+            alert(res.data.message);
+          } else {
+            alert(res.data.success);
+          }
+        });
     }
   };
   const { pathname } = useLocation();

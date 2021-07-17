@@ -9,11 +9,15 @@ router.route("/login").post(async (req, res) => {
   LoginSchema.findOne({ email: email }).then((result) => {
     if (result == null) {
       res.json({ message: "User does not exist", success: false });
-    } else if (result.password == password) {
-      user = result;
-      res.json({ user: result, success: true });
-    } else {
-      res.json({ message: "The password is incorrect", success: false });
+    } else if (result.password.length > 0) {
+      bcrypt.compare(password, result.password, (err, verified) => {
+        if (verified) {
+          user = result;
+          res.json({ user: result, success: true });
+        } else {
+          res.json({ message: "The password is incorrect", success: false });
+        }
+      });
     }
   });
 });
