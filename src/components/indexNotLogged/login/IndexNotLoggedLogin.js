@@ -15,6 +15,8 @@ export default function IndexNotLoggedLogin() {
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
   const [spinner, setSpinner] = useState(false);
+  const [serverError, setServerError] = useState("");
+  const [serverErrorBool, setServerErrorBool] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInputs((prevState) => ({
@@ -42,8 +44,10 @@ export default function IndexNotLoggedLogin() {
         })
         .then((res) => {
           if (res.data.success == false) {
-            alert(res.data.message);
+            setServerError(res.data.message);
+            setServerErrorBool(true);
           } else {
+            setServerErrorBool(false);
             alert(res.data.success);
           }
           setSpinner(false);
@@ -91,6 +95,13 @@ export default function IndexNotLoggedLogin() {
                 <Styled.GridContainer__ContentInput__Tooltip>
                   <Styled.GridContainer__ContentInput__Tooltip__Span>
                     Required
+                  </Styled.GridContainer__ContentInput__Tooltip__Span>
+                </Styled.GridContainer__ContentInput__Tooltip>
+              )}
+              {serverErrorBool && (
+                <Styled.GridContainer__ContentInput__Tooltip>
+                  <Styled.GridContainer__ContentInput__Tooltip__Span>
+                    {serverError}
                   </Styled.GridContainer__ContentInput__Tooltip__Span>
                 </Styled.GridContainer__ContentInput__Tooltip>
               )}
