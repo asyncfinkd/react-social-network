@@ -22,12 +22,13 @@ router.route("/login").post(async (req, res) => {
           user = result;
           res.json({
             user: {
-              firstName: firstName,
-              lastName: lastName,
-              email: email,
-              avatar: "",
-              detailInformation: detailInformation,
+              firstName: result.firstName,
+              lastName: result.lastName,
+              email: result.email,
+              avatar: result.avatar,
+              detailInformation: result.detailInformation,
             },
+            access_token: access_token,
             success: true,
           });
         } else {

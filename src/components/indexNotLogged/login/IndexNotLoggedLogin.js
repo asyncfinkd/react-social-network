@@ -48,7 +48,13 @@ export default function IndexNotLoggedLogin() {
             setServerErrorBool(true);
           } else {
             setServerErrorBool(false);
-            alert(res.data.success);
+            localStorage.setItem(
+              "access_token",
+              JSON.stringify(res.data.access_token)
+            );
+            localStorage.setItem("user", JSON.stringify(res.data.user));
+            localStorage.setItem("logged", true);
+            window.location.href = "/";
           }
           setSpinner(false);
         });

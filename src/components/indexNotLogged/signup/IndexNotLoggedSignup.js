@@ -110,7 +110,7 @@ export default function IndexNotLoggedSignup() {
             );
             localStorage.setItem("logged", true);
             localStorage.setItem("user", JSON.stringify(res.data.user));
-            window.location.reload();
+            window.location.href = "/";
           }
           setSpinner(false);
         });
