@@ -21,7 +21,7 @@ export default function IndexNotLoggedSignup() {
   const [emailError, setEmailError] = useState(false);
   const [emailValidError, setEmailValidError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
-  const [spinner, setSpinner] = useState(true);
+  const [spinner, setSpinner] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInputs((prevState) => ({
