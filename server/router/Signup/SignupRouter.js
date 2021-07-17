@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const LoginSchema = require("../../schema/Login/LoginSchema");
+const bcrypt = require("bcrypt");
 
 router.route("/signup").post(async (req, res) => {
   const firstName = req.body.firstName;
@@ -8,6 +9,13 @@ router.route("/signup").post(async (req, res) => {
   const password = req.body.password;
   const avatar = req.body.avatar;
   const detailInformation = req.body.detailInformation;
+
+  try {
+    var salt = await bcrypt.genSalt();
+    var hashedPassword = await bcrypt.hash(password, salt);
+  } catch (err) {
+    console.log(err);
+  }
 
   let user = {};
   LoginSchema.findOne({ email: email }).then((result) => {
@@ -18,7 +26,7 @@ router.route("/signup").post(async (req, res) => {
         firstName: firstName,
         lastName: lastName,
         email: email,
-        password: password,
+        password: hashedPassword,
         avatar: avatar,
         detailInformation: detailInformation,
       });

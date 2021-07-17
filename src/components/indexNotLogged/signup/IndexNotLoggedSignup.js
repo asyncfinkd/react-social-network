@@ -99,6 +99,7 @@ export default function IndexNotLoggedSignup() {
         .then((res) => {
           if (res.data.success == false) {
             setEmailValidError(true);
+            inputs.emailRef.current.focus();
           } else {
             setEmailValidError(false);
           }
