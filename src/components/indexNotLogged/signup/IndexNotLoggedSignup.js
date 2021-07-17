@@ -104,6 +104,13 @@ export default function IndexNotLoggedSignup() {
             inputs.emailRef.current.focus();
           } else {
             setEmailValidError(false);
+            localStorage.setItem(
+              "access_token",
+              JSON.stringify(res.data.access_token)
+            );
+            localStorage.setItem("logged", true);
+            localStorage.setItem("user", JSON.stringify(res.data.user));
+            window.location.reload();
           }
           setSpinner(false);
         });
