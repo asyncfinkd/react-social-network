@@ -80,6 +80,13 @@ export default function IndexNotLoggedSignup() {
                   autoCapitalize="off"
                   autoCorrect="off"
                 />
+                {firstNameError && (
+                  <Styled.GridContainer__ContentInput__Tooltip>
+                    <Styled.GridContainer__ContentInput__Tooltip__Span>
+                      Required
+                    </Styled.GridContainer__ContentInput__Tooltip__Span>
+                  </Styled.GridContainer__ContentInput__Tooltip>
+                )}
               </div>
               <div style={{ position: "relative" }}>
                 <Styled.GridContainerBoth__Input
@@ -93,6 +100,13 @@ export default function IndexNotLoggedSignup() {
                   autoCapitalize="off"
                   autoCorrect="off"
                 />
+                {lastNameError && (
+                  <Styled.GridContainer__ContentInput__Tooltip>
+                    <Styled.GridContainer__ContentInput__Tooltip__Span>
+                      Required
+                    </Styled.GridContainer__ContentInput__Tooltip__Span>
+                  </Styled.GridContainer__ContentInput__Tooltip>
+                )}
               </div>
             </Styled.GridContainerBoth__InputsContainer>
             <div style={{ position: "relative" }}>
@@ -108,6 +122,13 @@ export default function IndexNotLoggedSignup() {
                 autoCapitalize="off"
                 autoCorrect="off"
               />
+              {emailError && (
+                <Styled.GridContainer__ContentInput__Tooltip>
+                  <Styled.GridContainer__ContentInput__Tooltip__Span>
+                    Required
+                  </Styled.GridContainer__ContentInput__Tooltip__Span>
+                </Styled.GridContainer__ContentInput__Tooltip>
+              )}
             </div>
             <div style={{ position: "relative" }}>
               <Styled.GridContainerBoth__Input
@@ -122,6 +143,13 @@ export default function IndexNotLoggedSignup() {
                 autoCapitalize="off"
                 autoCorrect="off"
               />
+              {passwordError && (
+                <Styled.GridContainer__ContentInput__Tooltip>
+                  <Styled.GridContainer__ContentInput__Tooltip__Span>
+                    Required
+                  </Styled.GridContainer__ContentInput__Tooltip__Span>
+                </Styled.GridContainer__ContentInput__Tooltip>
+              )}
             </div>
             <Styled.GridContainer__ContentInputButton onClick={() => submit()}>
               Sign Up
