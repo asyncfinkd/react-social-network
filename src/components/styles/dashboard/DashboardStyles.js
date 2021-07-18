@@ -1,14 +1,82 @@
-import styled from "styled-components";
-
-export const Container__Alert = styled.div`
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+import styled, { keyframes } from "styled-components";
+const SpinnerAnimation = keyframes`
+0% {
+    left: -35%;
+    right: 100%;
+}
+60%, 100% {
+    left: 100%;
+    right: -90%;
+}
 `;
 
+const SpinnerSecondAnimation = keyframes`
+0% {
+    left: -200%;
+    right: 100%;
+}
+60%, 100% {
+    left: 107%;
+    right: -8%;
+}
+`;
+export const AlertContainer__Spinner = styled.div`
+  width: 100%;
+  height: 4px;
+  background-color: #242c37;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+`;
+
+export const AlertContainer__SpinnerBlur = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  width: 100%;
+  border-radius: 0 0 8px 8px;
+  height: 419px;
+  margin-top: 2px;
+  background-color: rgba(0, 0, 0, 0.6);
+`;
+
+export const AlertContaner__SpinnerSpan = styled.span`
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 9999;
+    bottom: 0px;
+    background-color: #fd4d4d;
+    animation: 2.1s cubic-bezier(0.65, 0.81, 0.73, 0.4) 0s infinite normal none
+      running ${SpinnerAnimation};
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    background-color: #fd4d4d;
+    animation: 2.1s cubic-bezier(0.16, 0.84, 0.44, 1) 1.15s infinite normal none
+      running ${SpinnerSecondAnimation};
+  }
+`;
+export const GridContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 800px) {
+    height: 100vh;
+  }
+`;
 export const Container__AlertContainer = styled.div`
   display: flex;
   align-items: center;
@@ -23,7 +91,44 @@ export const Container__AlertContent = styled.div`
   border-radius: 8px;
   height: 424px;
   display: flex;
+  position: relative;
   flex-direction: column;
+`;
+
+export const Container__TooltipContainer = styled.div`
+  position: absolute;
+  right: 0;
+  top: -35px;
+  background-color: #fd4d4d;
+  color: #dee3ea;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #fd4d4d;
+    width: 10px;
+    height: 10px;
+    bottom: -3px;
+    right: 10px;
+    transform: rotate(45deg);
+  }
+`;
+
+export const Container__TooltipSpan = styled.span`
+  color: #dee3ea;
+  font-size: 12px;
+  min-height: 15px;
+  font-weight: 300;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
 `;
 
 export const Container__AlertSpan = styled.span`
@@ -57,6 +162,7 @@ export const Container__Alert__BirthdayContainer = styled.div`
 
 export const Container__AlertBirthday__SelectContainer = styled.div`
   display: flex;
+  position: relative;
   align-items: center;
   margin-top: 8px;
   gap: 10px;

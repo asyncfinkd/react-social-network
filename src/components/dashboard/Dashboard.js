@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import DetailInformationAlert from "./alerts/DetailInformation/DetailInformationAlert";
 
 export default function Dashboard() {
@@ -16,6 +17,11 @@ export default function Dashboard() {
       setDashboardAlert(false);
     }
   }, []);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <>
       {DashboardAlert && (
