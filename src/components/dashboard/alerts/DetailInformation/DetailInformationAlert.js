@@ -3,6 +3,22 @@ import * as Styled from "../../../styles/dashboard/DashboardStyles";
 
 export default function DetailInformationAlert() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
+  const [values, setValues] = useState({
+    month: "",
+    day: "",
+    year: "",
+  });
+  const [sex, setSex] = useState("");
+  const takeSexValue = (SEX) => {
+    setSex(SEX);
+  };
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValues((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
   return (
     <>
       <Styled.Container__Alert>
@@ -21,7 +37,12 @@ export default function DetailInformationAlert() {
                 </Styled.Container__Alert__BirthdaySpan>
               </div>
               <Styled.Container__AlertBirthday__SelectContainer>
-                <Styled.Container__AlertBirthday__Select aria-label="Month">
+                <Styled.Container__AlertBirthday__Select
+                  aria-label="Month"
+                  value={values.month}
+                  name="month"
+                  onChange={handleChange}
+                >
                   <option>Month</option>
                   <option>Jan</option>
                   <option>Feb</option>
@@ -36,7 +57,12 @@ export default function DetailInformationAlert() {
                   <option>Nov</option>
                   <option>Dec</option>
                 </Styled.Container__AlertBirthday__Select>
-                <Styled.Container__AlertBirthday__Select aria-label="Day">
+                <Styled.Container__AlertBirthday__Select
+                  aria-label="Day"
+                  value={values.day}
+                  name="day"
+                  onChange={handleChange}
+                >
                   <option>Day</option>
                   <option>1</option>
                   <option>2</option>
@@ -70,7 +96,12 @@ export default function DetailInformationAlert() {
                   <option>30</option>
                   <option>31</option>
                 </Styled.Container__AlertBirthday__Select>
-                <Styled.Container__AlertBirthday__Select aria-label="Year">
+                <Styled.Container__AlertBirthday__Select
+                  aria-label="Year"
+                  value={values.year}
+                  name="year"
+                  onChange={handleChange}
+                >
                   <option>Year</option>
                   <option>2021</option>
                   <option>2020</option>
@@ -207,6 +238,7 @@ export default function DetailInformationAlert() {
                     type="radio"
                     name="sex"
                     id="female"
+                    onClick={() => takeSexValue("female")}
                   />
                 </Styled.Container__AlertGender__Span>
                 <Styled.Container__AlertGender__Span>
@@ -217,6 +249,7 @@ export default function DetailInformationAlert() {
                     type="radio"
                     name="sex"
                     id="male"
+                    onClick={() => takeSexValue("male")}
                   />
                 </Styled.Container__AlertGender__Span>
                 <Styled.Container__AlertGender__Span>
@@ -227,6 +260,7 @@ export default function DetailInformationAlert() {
                     type="radio"
                     name="sex"
                     id="custom"
+                    onClick={() => takeSexValue("custom")}
                   />
                 </Styled.Container__AlertGender__Span>
               </Styled.Container__AlertBirthday__SelectContainer>
