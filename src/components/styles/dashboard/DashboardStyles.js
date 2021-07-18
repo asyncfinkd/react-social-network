@@ -1,4 +1,5 @@
-import styled, { keyframes } from "styled-components/macro";
+import styled, { keyframes } from "styled-components";
+
 const SpinnerAnimation = keyframes`
 0% {
     left: -35%;
@@ -1037,5 +1038,338 @@ export const Dashboard__ThreeDashedSVG = styled.svg`
   height: 1.5em;
   width: 1.5em;
   fill: currentColor;
+  cursor: pointer;
+`;
+
+export const IndexDashboard__Main = styled.div`
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 1;
+  flex-grow: 1;
+  border: 0px solid black;
+  flex-basis: auto;
+  flex-direction: column;
+  margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+  position: relative;
+`;
+
+export const IndexDashboard__MainContent = styled.div`
+  width: 990px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  display: flex;
+  align-items: stretch;
+  border: 0px solid black;
+  flex-basis: auto;
+  flex-direction: column;
+  margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+  position: relative;
+`;
+
+export const IndexDashboard__MainContentContainer = styled.div`
+  backface-visibility: hidden;
+  display: flex;
+  flex-grow: 1;
+  align-items: stretch;
+  border: 0px solid black;
+  flex-basis: auto;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+  position: relative;
+`;
+
+export const IndexDashboard__MainContentContainerContent = styled.div`
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-grow: 1;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100%;
+  border: 0px solid black;
+  flex-basis: auto;
+  flex-shrink: 0;
+  margin: 0px;
+  min-width: 0px;
+  padding: 0px;
+  position: relative;
+`;
+
+export const IndexDashboard__MainContentContainerContent__Feed = styled.div`
+  max-width: 600px;
+  margin-right: 0px;
+  margin-left: 0px;
+  border: 0px solid black;
+  display: flex;
+  align-items: stretch;
+  flex-basis: auto;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding: 0px;
+  min-width: 0px;
+  min-height: 0px;
+  position: relative;
+`;
+
+export const IndexDashboard__MainContentContainerContent__FeedContent = styled.div`
+  display: flex;
+  align-items: stretch;
+  border: 0px solid black;
+  flex-basis: auto;
+  flex-shrink: 0;
+  margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+  position: relative;
+`;
+
+export const IndexDashboard__MainContentContainerContent__FeedContent__Title = styled.div`
+  position: sticky;
+  top: -0.5px;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: stretch;
+  flex-basis: A uto;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+`;
+
+export const IndexDashboard__MainContentContainerContent__FeedContent__TitleChild = styled.div`
+  cursor: pointer;
+  display: flex;
+  align-items: stretch;
+  border: 0px solid black;
+  flex-basis: auto;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+  position: relative;
+`;
+
+export const IndexDashboard__MainContentContainerContent__FeedContent__TitleChildContainer = styled.div`
+  height: 53px;
+  display: flex;
+  align-items: stretch;
+  flex-basis: auto;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+  position: relative;
+  cursor: pointer;
+`;
+
+export const IndexDashboard__MainContentContainerContent__FeedContent__TitleChildContainerContent = styled.div`
+  display: flex;
+  align-items: stretch;
+  border: 0px solid black;
+  flex-basis: auto;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+  position: relative;
+  cursor: pointer;
+`;
+
+export const IndexDashboard__MainContentContainerContent__FeedContent__TitleChildContainerContentSubTitle = styled.div`
+  height: 53px;
+  display: flex;
+  background-color: transparent;
+  border-bottom: 1px solid #242c37;
+  align-items: stretch;
+  flex-basis: auto;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+  position: relative;
+  cursor: pointer;
+`;
+
+export const IndexDashboard__MainContentContainerContent__FeedContent__TitleChildContainerContentSubTitleContainer = styled.div`
+  max-width: 1000px;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 598px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0px solid black;
+  flex-basis: auto;
+  flex-shrink: 0;
+  min-height: 0px;
+  min-width: 0px;
+  position: relative;
+  cursor: pointer;
+`;
+
+export const IndexDashboard__MainContentContainerContent__FeedContent__TitleChildContainerContentSubTitleContainerFirst = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-shrink: 1;
+  height: 100%;
+  flex-grow: 1;
+  border: 0px solid black;
+  flex-basis: auto;
+  flex-direction: column;
+  margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+  position: relative;
+  cursor: pointer;
+`;
+
+export const IndexDashboard__MainContentContainerContent__FeedContent__TitleChildContainerContentSubTitleContainerFirstContent = styled.div`
+  display: flex;
+  align-items: flex-start;
+  border: 0px solid black;
+  display: flex;
+  flex-basis: auto;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+  position: relative;
+`;
+
+export const IndexDashboard__MainContentContainerContent__FeedContent__TitleChildContainerContentSubTitleContainerFirstContentH2 = styled.h2`
+  font-weight: 800;
+  line-height: 24px;
+  font-size: 20px;
+  color: #dee3ea;
+  overflow-wrap: break-word;
+  min-width: 0px;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border: 0px solid black;
+  font-family: Inter-Regular;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  list-style: outside none none;
+  text-align: inherit;
+  text-decoration: none;
+`;
+
+export const IndexDashboard__MainContentContainerContent__FeedContent__TitleChildContainerContentSubTitleContainerFirstContentH2SPAN = styled.span`
+  font-family: inherit;
+  overflow-wrap: break-word;
+  color: inherit;
+  white-space: inherit;
+  border: 0px solid black;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  list-style: outside none none;
+  cursor: pointer;
+`;
+
+export const TweetNotification__FeedTitle = styled.div`
+  margin-left: 16px;
+  min-height: 32px;
+  min-width: 32px;
+  align-self: stretch;
+  justify-content: center;
+  align-items: flex-end;
+  border: 0px solid black;
+  display: flex;
+  flex-basis: auto;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding: 0px;
+  position: relative;
+  cursor: pointer;
+`;
+
+export const TweetNotification__FeedTitleContainer = styled.div`
+  margin-right: calc(-10px);
+  min-width: 40px;
+  min-height: 40px;
+  outline-style: none;
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.2s;
+  user-select: none;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  border-radius: 9999;
+  display: flex;
+  align-items: stretch;
+  flex-basis: auto;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding: 0px;
+  position: relative;
+  cursor: pointer;
+`;
+
+export const TweetNotification__FeedTitleContainerContent = styled.div`
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  overflow-wrap: break-word;
+  min-width: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  flex-direction: row;
+  color: #fd4d4d;
+  text-align: center;
+  border: 0px solid black;
+  margin: 0px;
+  padding: 0px;
+  white-space: pre-wrap;
+  cursor: pointer;
+`;
+
+export const TweetNotification__FeedTitleContainerContentSVG = styled.svg`
+  width: 22px;
+  height: 22px;
+  color: #fd4d4d;
+  user-select: none;
+  position: relative;
+  max-width: 100%;
+  fill: currentColor;
+  display: inline-block;
+  font-weight: 700;
+  line-height: 20px;
+  overflow-wrap: break-word;
+  text-align: center;
+  white-space: pre-wrap;
   cursor: pointer;
 `;
