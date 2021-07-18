@@ -32,6 +32,7 @@ export default function DetailInformationAlert() {
       setSexError(true);
       setDateError(false);
     } else {
+      setSpinner(true);
       setSexError(false);
       setDateError(false);
       const detailInformation = [
@@ -52,7 +53,9 @@ export default function DetailInformationAlert() {
           detailInformation: detailInformation,
         })
         .then((res) => {
-          console.log(res);
+          setSpinner(false);
+          console.log(res.data);
+          localStorage.setItem("user", JSON.stringify(res.data.user));
         });
     }
   };
