@@ -106,7 +106,7 @@ export default function IndexNotLoggedSignup() {
             setEmailValidError(false);
             localStorage.setItem("logged", true);
             localStorage.setItem("user", JSON.stringify(res.data.user));
-            window.location.href = "/";
+            // window.location.href = "/";
           }
           setSpinner(false);
         });

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import DetailInformationAlert from "./alerts/DetailInformation/DetailInformationAlert";
+import IndexDashboard from "./index/IndexDashboard";
 
 export default function Dashboard() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
@@ -30,7 +31,7 @@ export default function Dashboard() {
         </>
       ) : (
         <>
-          <p>Dashboard Page</p>
+          <IndexDashboard />
         </>
       )}
     </>

@@ -70,3 +70,7 @@ a {
 button[disabled] {
   opacity: 0.8;
 }
+
+.active__navLink {
+  color: #fd4d4d !important;
+}
