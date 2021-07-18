@@ -56,6 +56,7 @@ export default function DetailInformationAlert() {
           setSpinner(false);
           console.log(res.data);
           localStorage.setItem("user", JSON.stringify(res.data.user));
+          window.location.reload();
         });
     }
   };

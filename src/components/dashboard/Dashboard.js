@@ -24,9 +24,13 @@ export default function Dashboard() {
   }, [pathname]);
   return (
     <>
-      {DashboardAlert && (
+      {DashboardAlert ? (
         <>
           <DetailInformationAlert />
+        </>
+      ) : (
+        <>
+          <p>Dashboard Page</p>
         </>
       )}
     </>
