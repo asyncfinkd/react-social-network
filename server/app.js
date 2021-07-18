@@ -22,6 +22,9 @@ app.use("/auth", Login);
 // const GetAll = require("./router/GetAll/GetAllRouter");
 // app.use("/auth", GetAll);
 
+const ChangeDetailInformation = require("./router/ChangeDetailInformation/ChangeDetailInformationRouter");
+app.use("/auth", ChangeDetailInformation);
+
 const PORT = 3001;
 
 app.listen(PORT, () => {

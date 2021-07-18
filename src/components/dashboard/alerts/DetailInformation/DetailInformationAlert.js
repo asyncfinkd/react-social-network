@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import * as Styled from "../../../styles/dashboard/DashboardStyles";
+import axios from "axios";
+import env from "../../../../constants/Application/env.json";
 
 export default function DetailInformationAlert() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
@@ -32,6 +34,26 @@ export default function DetailInformationAlert() {
     } else {
       setSexError(false);
       setDateError(false);
+      const detailInformation = [
+        {
+          date: [
+            {
+              day: values.day,
+              month: values.month,
+              year: values.year,
+            },
+          ],
+          sex: sex,
+        },
+      ];
+      axios
+        .post(`${env.host}/auth/changeDetailInformation`, {
+          email: user.email,
+          detailInformation: detailInformation,
+        })
+        .then((res) => {
+          console.log(res);
+        });
     }
   };
   return (
