@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import * as Styled from "../../styles/dashboard/DashboardStyles";
 
 export default function IndexDashboard() {
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
   return (
     <>
       <Styled.IndexDashboard__Container>
@@ -262,7 +263,48 @@ export default function IndexDashboard() {
                       </Styled.TweetButton>
                     </Styled.Dashboard__HeaderFirstContainerContentFirst>
                     <Styled.Dashboard__HeaderSecondContainer>
-                      qwe
+                      <Styled.Dashboard__HeaderSecondContent>
+                        <Styled.Dashboard__HeaderSecondContentContainer>
+                          <Styled.Dashboard__HeaderSecontContainerLogo>
+                            <Styled.Dashboard__HeaderSecontContentLogo>
+                              <Styled.DashbordHeader__ContainerContent__Logo>
+                                <Styled.DashbordHeader__ContainerContent__LogoContent>
+                                  <Styled.IMAGEDashboard__Header></Styled.IMAGEDashboard__Header>
+                                </Styled.DashbordHeader__ContainerContent__LogoContent>
+                              </Styled.DashbordHeader__ContainerContent__Logo>
+                            </Styled.Dashboard__HeaderSecontContentLogo>
+                          </Styled.Dashboard__HeaderSecontContainerLogo>
+                          <Styled.Dashboard__HeaderContainerTitle>
+                            <Styled.Dashboard__HeaderContainerTitleContent>
+                              <Styled.Dashboard__HeaderContainerTitleContentFirst>
+                                <Styled.Dashboard__HeaderContainerTitleContentFirstContent>
+                                  <Styled.Dashboard__HeaderContainerTitleContentFirstContentSPAN>
+                                    <Styled.Dashboard__HeaderContainerTitleContentFirstContentSPANCONTENT>
+                                      {user.firstName} {user.lastName}
+                                    </Styled.Dashboard__HeaderContainerTitleContentFirstContentSPANCONTENT>
+                                  </Styled.Dashboard__HeaderContainerTitleContentFirstContentSPAN>
+                                </Styled.Dashboard__HeaderContainerTitleContentFirstContent>
+                              </Styled.Dashboard__HeaderContainerTitleContentFirst>
+                              <Styled.Dashboard__HeaderContainerTitleContentSecond>
+                                <Styled.Dashboard__HeaderContainerTitleContentSecondContainer>
+                                  <Styled.Dashboard__HeaderContainerTitleContentSecondContainerSPAN>
+                                    {user.email}
+                                  </Styled.Dashboard__HeaderContainerTitleContentSecondContainerSPAN>
+                                </Styled.Dashboard__HeaderContainerTitleContentSecondContainer>
+                              </Styled.Dashboard__HeaderContainerTitleContentSecond>
+                            </Styled.Dashboard__HeaderContainerTitleContent>
+                          </Styled.Dashboard__HeaderContainerTitle>
+                        </Styled.Dashboard__HeaderSecondContentContainer>
+                        <Styled.Dashboard__ThreeDashed>
+                          <Styled.Dashboard__ThreeDashedSVG>
+                            <g>
+                              <circle cx="5" cy="12" r="2"></circle>
+                              <circle cx="12" cy="12" r="2"></circle>
+                              <circle cx="19" cy="12" r="2"></circle>
+                            </g>
+                          </Styled.Dashboard__ThreeDashedSVG>
+                        </Styled.Dashboard__ThreeDashed>
+                      </Styled.Dashboard__HeaderSecondContent>
                     </Styled.Dashboard__HeaderSecondContainer>
                   </Styled.Dashboard__HeaderFirstContainerContent>
                 </Styled.Dashboard__HeaderFirstContainer>

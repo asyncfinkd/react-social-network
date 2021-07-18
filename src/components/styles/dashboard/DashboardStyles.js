@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components/macro";
 const SpinnerAnimation = keyframes`
 0% {
     left: -35%;
@@ -790,4 +790,252 @@ export const Dashboard__HeaderSecondContentContainer = styled.div`
   min-width: 0px;
   flex-basis: auto;
   position: relative;
+  cursor: pointer;
+`;
+
+export const Dashboard__HeaderSecontContainerLogo = styled.div`
+  display: flex;
+  align-items: stretch;
+  border: 0px solid black;
+  flex-basis: auto;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+  position: relative;
+  cursor: pointer;
+`;
+
+export const Dashboard__HeaderSecontContentLogo = styled.div`
+  width: 40px;
+  height: 40px;
+  outline-style: none;
+  /* background-color: rgb(255,255,255); */
+  overflow: hidden;
+  border-radius: 9999px;
+  display: flex;
+  align-items: stretch;
+  border: 0px solid black;
+  flex-basis: auto;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+  position: relative;
+  cursor: pointer;
+`;
+
+export const DashbordHeader__ContainerContent__Logo = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+`;
+
+export const DashbordHeader__ContainerContent__LogoContent = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  border: 0px solid black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 0px;
+  width: 100%;
+  height: 100%;
+  min-height: 0px;
+  padding: 0px;
+  margin: 0px;
+  cursor: pointer;
+`;
+
+export const IMAGEDashboard__Header = styled.div`
+  background-image: url("https://secure.gravatar.com/avatar/7aa47a75bd1cd20b6370eb823bb86c07?s=500&d=mm&r=g");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  border: 0px solid black;
+  flex-direction: column;
+  margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+  cursor: pointer;
+`;
+
+export const Dashboard__HeaderContainerTitle = styled.div`
+  outline-style: none;
+  flex-shrink: 1;
+  max-width: 100%;
+  display: flex;
+  align-items: stretch;
+  border: 0px solid black;
+  flex-basis: 0;
+  flex-direction: column;
+  margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+  position: relative;
+  cursor: pointer;
+`;
+
+export const Dashboard__HeaderContainerTitleContent = styled.div`
+  outline-style: none;
+  flex-shrink: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  margin-left: 12px;
+  margin-right: 12px;
+  display: flex;
+  align-items: stretch;
+  flex-basis: auto;
+  flex-direction: column;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+  position: relative;
+  cursor: pointer;
+`;
+
+export const Dashboard__HeaderContainerTitleContentFirst = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  max-width: 100%;
+  border: 0px solid black;
+  flex-basis: auto;
+  flex-shrink: 0;
+  margin: 0px;
+  min-height: 0px;
+  min-height: 0px;
+  padding: 0px;
+  position: relative;
+  cursor: pointer;
+`;
+
+export const Dashboard__HeaderContainerTitleContentFirstContent = styled.div`
+  white-space: nowrap;
+  color: #dee3ea;
+  font-family: Inter-Regular;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 15px;
+  overflow-wrap: break-word;
+  min-width: 0px;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  border: 0px solid black;
+  display: inline;
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+`;
+
+export const Dashboard__HeaderContainerTitleContentFirstContentSPAN = styled.span`
+  overflow-wrap: break-word;
+  font-family: inherit;
+  color: inherit;
+  white-space: inherit;
+  border: 0px solid black;
+  display: inline;
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+`;
+
+export const Dashboard__HeaderContainerTitleContentFirstContentSPANCONTENT = styled.span`
+  font-family: inherit;
+  overflow-wrap: break-word;
+  color: inherit;
+  white-space: inherit;
+  border: 0px solid black;
+  display: inline;
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+`;
+
+export const Dashboard__HeaderContainerTitleContentSecond = styled.div`
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: row;
+  border: 0px solid black;
+  flex-basis: auto;
+  align-items: stretch;
+  margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+  position: relative;
+  cursor: pointer;
+`;
+
+export const Dashboard__HeaderContainerTitleContentSecondContainer = styled.div`
+  color: rgb(83, 100, 113);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  overflow-wrap: break-word;
+  min-width: 0;
+  max-width: 100%;
+  font-family: Inter-Regular;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border: 0px solid black;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+`;
+
+export const Dashboard__HeaderContainerTitleContentSecondContainerSPAN = styled.span`
+  font-family: inherit;
+  overflow-wrap: break-word;
+  color: inherit;
+  white-space: inherit;
+  border: 0px solid black;
+  display: inline;
+  margin: 0;
+  top: 1px;
+  position: relative;
+  padding: 0;
+  cursor: pointer;
+`;
+
+export const Dashboard__ThreeDashed = styled.div`
+  position: absolute;
+  right: 15px;
+  top: 55%;
+  transform: translateY(-50%);
+`;
+
+export const Dashboard__ThreeDashedSVG = styled.svg`
+  color: #dee3ea;
+  user-select: none;
+  position: relative;
+  max-width: 100%;
+  height: 1.5em;
+  width: 1.5em;
+  fill: currentColor;
+  cursor: pointer;
 `;
