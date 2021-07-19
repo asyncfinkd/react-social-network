@@ -3,8 +3,14 @@ import * as Styled from "../../styles/dashboard/DashboardStyles";
 
 export default function IndexDashboard() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
+  const [showMore, setShowMore] = useState(false);
   return (
     <>
+      {showMore && (
+        <>
+          <p>hello</p>
+        </>
+      )}
       <Styled.IndexDashboard__Container>
         <Styled.IndexDashboard__Container>
           <Styled.IndexDashboard__Content>
@@ -220,7 +226,9 @@ export default function IndexDashboard() {
                               </Styled.DashboardNavLink__ContainerTitles>
                             </Styled.Dashboard__HeroContainer__NavLinkContainer>
                           </Styled.Dashboard__HeroContainer__NavLink>
-                          <Styled.Dashboard__HeroContainer__NavLink>
+                          <Styled.Dashboard__HeroContainer__NavLink
+                            onClick={() => setShowMore(!showMore)}
+                          >
                             <Styled.Dashboard__HeroContainer__NavLinkContainer>
                               <Styled.Dashboard__NavLinkContainerContentIcon>
                                 <Styled.Dashboard__NavLinkContainerContentIconSVG
