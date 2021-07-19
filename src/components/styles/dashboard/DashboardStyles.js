@@ -1490,3 +1490,384 @@ export const ShowMore__BackgroundFixed = styled.div`
   top: 0;
   left: 0;
 `;
+
+export const ShowProfile__Container = styled.div`
+  position: fixed;
+  bottom: 86px;
+  backface-visibility: hidden;
+  pointer-events: none;
+  border: 0px solid black;
+  display: flex;
+  z-index: 999;
+  flex-basis: auto;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0px;
+  min-width: 0px;
+  min-height: 0px;
+  padding: 0px;
+`;
+
+export const ShowProfile__Content = styled.div`
+  align-self: stretch;
+  flex-shrink: 1;
+  flex-grow: 1;
+  border: 0px solid black;
+  align-items: stretch;
+  display: flex;
+  flex-basis: auto;
+  flex-direction: column;
+  margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+  position: relative;
+`;
+
+export const ShowProfile__Dialog = styled.div`
+  display: flex;
+  align-items: stretch;
+  flex-basis: auto;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0;
+  position: relative;
+`;
+
+export const ShowProfile__DialogContent = styled.div`
+  box-shadow: rgb(101 119 134 / 20%) 0px 0px 15px,
+    rgb(101 119 134 / 15%) 0px 0px 3px 1px;
+  background-color: #151a21;
+  border-radius: 16px;
+  display: flex;
+  align-items: stretch;
+  border: 0px solid black;
+  flex-basis: auto;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  position: relative;
+`;
+
+export const ShowProfile__DialogContent__Container = styled.div`
+  width: 300px;
+  min-width: 240px;
+  min-height: 30px;
+  max-width: 360px;
+  max-height: 480px;
+  overflow: auto;
+  border: 0px solid black;
+  display: flex;
+  align-items: stretch;
+  flex-basis: auto;
+  margin: 0;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding: 0;
+  position: relative;
+`;
+
+export const ShowProfile__DialogContent__ContainerContent = styled.div`
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+  align-items: stretch;
+  border: 0px solid black;
+  flex-basis: auto;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+  position: relative;
+`;
+
+export const ShowProfile__DialogContent__ContainerContentLI = styled.li`
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(239, 243, 244);
+  outline-style: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  align-items: stretch;
+  border: 0px solid black;
+  flex-basis: auto;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0px;
+  min-width: 0px;
+  min-height: 0px;
+  position: relative;
+  color: inherit;
+  list-style: none;
+  text-align: inherit;
+  text-decoration: none;
+`;
+
+export const ShowProfile__DialogContent__ContainerContentLIDIV = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  border: 0px solid black;
+  flex-basis: auto;
+  flex-shrink: 0;
+  margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+  position: relative;
+`;
+
+export const ShowProfile__DialogContent__ContainerContentLIDIVAvatar = styled.div`
+  display: flex;
+  flex-basis: 48px;
+  margin-right: 12px;
+  flex-grow: 0;
+  justify-content: center;
+  border: 0px solid black;
+  align-items: stretch;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+  position: relative;
+`;
+
+export const ShowProfile__DialogContent__ContainerContentLIDIVAvatarContent = styled.div`
+  height: 48px;
+  width: 100%;
+  outline-style: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 9999px;
+  overflow: hidden;
+  display: block;
+  align-items: stretch;
+  border: 0px solid black;
+  flex-basis: auto;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0px;
+  min-height: 0;
+  min-width: 0;
+  padding: 0;
+  position: relative;
+`;
+
+export const ShowProfile__DialogContent__ContainerContentLIDIVAvatarContentDIVChild = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+`;
+
+export const ShowProfile__DialogContent__ContainerContentLIDIVAvatarContentDIVChildImage = styled.div`
+  flex-basis: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 9999px;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0px;
+  padding: 0px;
+`;
+
+export const ShowProfile__DialogContent__ContainerContentLIDIVAvatarContentDIVChildImageContent = styled.img`
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border: 0px solid black;
+  display: flex;
+  flex-basis: auto;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+`;
+
+export const ShowProfile__DialogContent__InformationTitle = styled.div`
+  display: flex;
+  flex-basis: 0px;
+  flex-grow: 1;
+  border: 0px solid black;
+  align-items: stretch;
+  flex-direction: column;
+  flex-shrink: 0;
+  min-height: 0;
+  margin-left: 15px;
+  min-width: 0;
+  padding: 0;
+  position: relative;
+`;
+
+export const ShowProfile__DialogContent__InformationTitleContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  border: 0px solid black;
+  flex-basis: auto;
+  flex-shrink: 0;
+  margin: 0;
+  min-height: 0;
+  min-width: 0;
+  padding: 0;
+  position: relative;
+`;
+
+export const ShowProfile__DialogContent__InformationTitleContainerContent = styled.div`
+  outline-style: none;
+  flex-shrink: 1;
+  max-width: 100%;
+  display: flex;
+  align-items: stretch;
+  flex-basis: auto;
+  flex-direction: column;
+  margin: 0;
+  min-height: 0;
+  min-width: 0;
+  padding: 0;
+  position: relative;
+`;
+
+export const ShowProfile__DialogContent__InformationTitleContainerContentFirst = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  max-width: 100%;
+  border: 0px solid black;
+  flex-basis: auto;
+  flex-shrink: 0;
+  margin: 0;
+  min-width: 0px;
+  min-height: 0px;
+  padding: 0;
+  position: relative;
+`;
+
+export const ShowProfile__DialogContent__InformationTitleContainerContentFirstText = styled.div`
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 15px;
+  color: #dee3ea;
+  line-height: 20px;
+  overflow-wrap: break-word;
+  min-width: 0px;
+  overflow: hidden;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  border: 0px solid black;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-family: Inter-Regular;
+`;
+
+export const ShowProfile__DialogContent__InformationTitleContainerContentFirstTextSpan = styled.span`
+  font-family: inherit;
+  overflow-wrap: break-word;
+  min-width: 0px;
+  color: inherit;
+  white-space: inherit;
+  border: 0px solid black;
+  letter-spacing: 1px;
+  display: inline;
+  margin: 0;
+  padding: 0;
+`;
+
+export const ShowProfile__DialogContent__InformationTitleContainerContentFirstTextSpanChild = styled.span`
+  font-family: inherit;
+  overflow-wrap: break-word;
+  min-width: 0;
+  color: inherit;
+  white-space: inherit;
+  border: 0px solid black;
+  margin: 0;
+  padding: 0;
+`;
+
+export const ShowProfile__DialogContent__InformationTitleContainerContentSecond = styled.div`
+  flex-shrink: 1;
+  flex-direction: row;
+  align-items: stretch;
+  border: 0px solid black;
+  display: flex;
+  margin: 0;
+  min-height: 0;
+  min-width: 0;
+  padding: 0;
+  position: relative;
+`;
+
+export const ShowProfile__DialogContent__InformationTitleContainerContentSecondContent = styled.div`
+  color: rgb(83, 100, 113);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  overflow-wrap: break-word;
+  min-width: 0px;
+  flex-direction: row;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border: 0px solid black;
+  display: inline;
+  margin: 0px;
+  padding: 0px;
+`;
+
+export const ShowProfile__DialogContent__InformationTitleContainerContentSecondContentSpan = styled.span`
+  font-family: inherit;
+  overflow-wrap: break-word;
+  min-width: 0;
+  color: inherit;
+  white-space: inherit;
+  border: 0px solid black;
+  display: inline;
+  margin: 0;
+  padding: 0;
+`;
+
+export const ShowProfile__DialogContent__InformationTitleContainerContentSVG = styled.svg`
+  margin-left: 12px;
+  flex-shrink: 0;
+  color: #fd4d4d;
+  user-select: none;
+  vertical-align: text-bottom;
+  position: relative;
+  top: 14px;
+  max-width: 100%;
+  height: 1.6em;
+  width: 1.6em;
+  fill: currentColor;
+  display: inline-block;
+`;

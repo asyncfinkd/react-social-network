@@ -7,7 +7,6 @@ export default function IndexDashboard() {
   const [showProfile, setShowProfile] = useState(false);
   return (
     <>
-      {showProfile && <p>hello</p>}
       <Styled.IndexDashboard__Container>
         <Styled.IndexDashboard__Container>
           <Styled.IndexDashboard__Content>
@@ -433,6 +432,64 @@ export default function IndexDashboard() {
                       </Styled.TweetButton>
                     </Styled.Dashboard__HeaderFirstContainerContentFirst>
                     <Styled.Dashboard__HeaderSecondContainer>
+                      {showProfile && (
+                        <>
+                          <Styled.ShowProfile__Container>
+                            <Styled.ShowProfile__Content>
+                              <Styled.ShowProfile__Dialog role="dialog">
+                                <div>
+                                  <Styled.ShowProfile__DialogContent>
+                                    <Styled.ShowProfile__DialogContent__Container>
+                                      <Styled.ShowProfile__DialogContent__ContainerContent>
+                                        <Styled.ShowProfile__DialogContent__ContainerContentLI role="listitem">
+                                          <Styled.ShowProfile__DialogContent__ContainerContentLIDIV>
+                                            <Styled.ShowProfile__DialogContent__ContainerContentLIDIVAvatar>
+                                              <Styled.ShowProfile__DialogContent__ContainerContentLIDIVAvatarContent>
+                                                <Styled.ShowProfile__DialogContent__ContainerContentLIDIVAvatarContentDIVChildImageContent src="https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png" />
+                                              </Styled.ShowProfile__DialogContent__ContainerContentLIDIVAvatarContent>
+                                            </Styled.ShowProfile__DialogContent__ContainerContentLIDIVAvatar>
+                                            <Styled.ShowProfile__DialogContent__InformationTitle>
+                                              <Styled.ShowProfile__DialogContent__InformationTitleContainer>
+                                                <Styled.ShowProfile__DialogContent__InformationTitleContainerContent>
+                                                  <Styled.ShowProfile__DialogContent__InformationTitleContainerContent>
+                                                    <Styled.ShowProfile__DialogContent__InformationTitleContainerContentFirst>
+                                                      <Styled.ShowProfile__DialogContent__InformationTitleContainerContentFirstText>
+                                                        <Styled.ShowProfile__DialogContent__InformationTitleContainerContentFirstTextSpan>
+                                                          <Styled.ShowProfile__DialogContent__InformationTitleContainerContentFirstTextSpanChild></Styled.ShowProfile__DialogContent__InformationTitleContainerContentFirstTextSpanChild>
+                                                          {user.firstName}{" "}
+                                                          {user.lastName}
+                                                        </Styled.ShowProfile__DialogContent__InformationTitleContainerContentFirstTextSpan>
+                                                      </Styled.ShowProfile__DialogContent__InformationTitleContainerContentFirstText>
+                                                    </Styled.ShowProfile__DialogContent__InformationTitleContainerContentFirst>
+                                                    <Styled.ShowProfile__DialogContent__InformationTitleContainerContentSecond>
+                                                      <Styled.ShowProfile__DialogContent__InformationTitleContainerContentSecondContent>
+                                                        <Styled.ShowProfile__DialogContent__InformationTitleContainerContentSecondContentSpan>
+                                                          {user.email}
+                                                        </Styled.ShowProfile__DialogContent__InformationTitleContainerContentSecondContentSpan>
+                                                      </Styled.ShowProfile__DialogContent__InformationTitleContainerContentSecondContent>
+                                                    </Styled.ShowProfile__DialogContent__InformationTitleContainerContentSecond>
+                                                  </Styled.ShowProfile__DialogContent__InformationTitleContainerContent>
+                                                </Styled.ShowProfile__DialogContent__InformationTitleContainerContent>
+                                              </Styled.ShowProfile__DialogContent__InformationTitleContainer>
+                                            </Styled.ShowProfile__DialogContent__InformationTitle>
+                                            <Styled.ShowProfile__DialogContent__InformationTitleContainerContentSVG>
+                                              <g>
+                                                <path d="M9 20c-.264 0-.52-.104-.707-.293l-4.785-4.785c-.39-.39-.39-1.023 0-1.414s1.023-.39 1.414 0l3.946 3.945L18.075 4.41c.32-.45.94-.558 1.395-.24.45.318.56.942.24 1.394L9.817 19.577c-.17.24-.438.395-.732.42-.028.002-.057.003-.085.003z"></path>
+                                              </g>
+                                            </Styled.ShowProfile__DialogContent__InformationTitleContainerContentSVG>
+                                          </Styled.ShowProfile__DialogContent__ContainerContentLIDIV>
+                                        </Styled.ShowProfile__DialogContent__ContainerContentLI>
+                                        {/* li-s qvemot racaa */}
+                                        <div>qwe</div>
+                                      </Styled.ShowProfile__DialogContent__ContainerContent>
+                                    </Styled.ShowProfile__DialogContent__Container>
+                                  </Styled.ShowProfile__DialogContent>
+                                </div>
+                              </Styled.ShowProfile__Dialog>
+                            </Styled.ShowProfile__Content>
+                          </Styled.ShowProfile__Container>
+                        </>
+                      )}
                       <Styled.Dashboard__HeaderSecondContent
                         onClick={() => {
                           setShowProfile(!showProfile);
