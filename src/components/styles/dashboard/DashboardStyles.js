@@ -1368,6 +1368,11 @@ export const TweetNotification__FeedTitleContainerContent = styled.div`
   padding: 0px;
   white-space: pre-wrap;
   cursor: pointer;
+  border-radius: 9999px;
+
+  &:hover {
+    background-color: rgba(253, 77, 77, 0.1);
+  }
 `;
 
 export const TweetNotification__FeedTitleContainerContentSVG = styled.svg`
