@@ -870,7 +870,7 @@ export const DashbordHeader__ContainerContent__LogoContent = styled.div`
 `;
 
 export const IMAGEDashboard__Header = styled.div`
-  background-image: url("https://secure.gravatar.com/avatar/7aa47a75bd1cd20b6370eb823bb86c07?s=500&d=mm&r=g");
+  background-image: url("https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1391,4 +1391,102 @@ export const TweetNotification__FeedTitleContainerContentSVG = styled.svg`
   text-align: center;
   white-space: pre-wrap;
   cursor: pointer;
+`;
+
+export const ShowMore__Container = styled.div`
+  max-height: calc(100vh - 47px);
+  box-shadow: rgb(101 119 134 / 20%) 0px 0px 15px,
+    rgb(101 119 134 / 15%) 0px 0px 3px 1px;
+  width: 220px;
+  overflow-y: auto;
+  z-index: 999;
+  position: fixed;
+  background-color: #151a21;
+  overscroll-behavior: contain;
+  border-radius: 4px;
+  border: 0px solid black;
+  display: flex;
+  margin-left: 12px;
+  flex-basis: auto;
+  flex-direction: column;
+  z-index: 9999;
+  flex-shrink: 0;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+`;
+
+export const ShowMore__Content = styled.div`
+  display: flex;
+  align-items: stretch;
+  border: 0px solid black;
+  flex-basis: auto;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0px;
+  padding: 0px;
+  min-width: 0px;
+  min-height: 0px;
+  position: relative;
+`;
+
+export const ShowMore__ContentContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  flex-direction: column;
+`;
+
+export const ShowMore__ContentContainerLink = styled.a`
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  max-width: 100%;
+  width: 100%;
+
+  &:hover {
+    background-color: rgba(247, 249, 249, 0.1);
+  }
+`;
+
+export const ShowMore__ContentContainerLinkContainer = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  font-family: Inter-Regular;
+  position: relative;
+`;
+
+export const ShowMore__ContentContainerLinkContainerSVG = styled.svg`
+  margin-right: 12px;
+  color: #dee3ea;
+  position: relative;
+  fill: currentColor;
+  height: 1.6em;
+  width: 1.6em;
+`;
+
+export const ShowMore__ContentContainerLinkContainerTitle = styled.div`
+  font-weight: 400;
+  color: #dee3ea;
+  font-size: 15px;
+  line-height: 20px;
+  margin-top: 2px;
+`;
+
+export const ShowMore__ContentContainerLinkContainerTitleSPAN = styled.span`
+  font-family: inherit;
+  color: inherit;
+  white-space: inherit;
+`;
+
+export const ShowMore__BackgroundFixed = styled.div`
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
 `;
