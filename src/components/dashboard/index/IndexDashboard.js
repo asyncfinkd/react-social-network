@@ -479,8 +479,24 @@ export default function IndexDashboard() {
                                             </Styled.ShowProfile__DialogContent__InformationTitleContainerContentSVG>
                                           </Styled.ShowProfile__DialogContent__ContainerContentLIDIV>
                                         </Styled.ShowProfile__DialogContent__ContainerContentLI>
-                                        {/* li-s qvemot racaa */}
-                                        <div>qwe</div>
+                                        <Styled.ShowProfile__DialogContent__ContainerContentLink role="menuitem">
+                                          <Styled.ShowProfile__DialogContent__ContainerContentLinkContent>
+                                            <Styled.ShowProfile__DialogContent__ContainerContentLinkContentMessage>
+                                              <Styled.ShowProfile__DialogContent__ContainerContentLinkContentMessageSpan>
+                                                Add an existing account
+                                              </Styled.ShowProfile__DialogContent__ContainerContentLinkContentMessageSpan>
+                                            </Styled.ShowProfile__DialogContent__ContainerContentLinkContentMessage>
+                                          </Styled.ShowProfile__DialogContent__ContainerContentLinkContent>
+                                        </Styled.ShowProfile__DialogContent__ContainerContentLink>
+                                        <Styled.ShowProfile__DialogContent__ContainerContentLink role="menuitem">
+                                          <Styled.ShowProfile__DialogContent__ContainerContentLinkContent>
+                                            <Styled.ShowProfile__DialogContent__ContainerContentLinkContentMessage>
+                                              <Styled.ShowProfile__DialogContent__ContainerContentLinkContentMessageSpan>
+                                                Log out {user.email}
+                                              </Styled.ShowProfile__DialogContent__ContainerContentLinkContentMessageSpan>
+                                            </Styled.ShowProfile__DialogContent__ContainerContentLinkContentMessage>
+                                          </Styled.ShowProfile__DialogContent__ContainerContentLinkContent>
+                                        </Styled.ShowProfile__DialogContent__ContainerContentLink>
                                       </Styled.ShowProfile__DialogContent__ContainerContent>
                                     </Styled.ShowProfile__DialogContent__Container>
                                   </Styled.ShowProfile__DialogContent>

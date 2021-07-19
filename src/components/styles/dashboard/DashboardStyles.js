@@ -1493,7 +1493,7 @@ export const ShowMore__BackgroundFixed = styled.div`
 
 export const ShowProfile__Container = styled.div`
   position: fixed;
-  bottom: 86px;
+  bottom: 90px;
   backface-visibility: hidden;
   pointer-events: none;
   border: 0px solid black;
@@ -1506,6 +1506,18 @@ export const ShowProfile__Container = styled.div`
   min-width: 0px;
   min-height: 0px;
   padding: 0px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(21, 26, 33, 1);
+    width: 24px;
+    transform: rotate(45deg);
+    height: 24px;
+  }
 `;
 
 export const ShowProfile__Content = styled.div`
@@ -1556,7 +1568,7 @@ export const ShowProfile__DialogContent = styled.div`
 `;
 
 export const ShowProfile__DialogContent__Container = styled.div`
-  width: 300px;
+  width: 280px;
   min-width: 240px;
   min-height: 30px;
   max-width: 360px;
@@ -1870,4 +1882,65 @@ export const ShowProfile__DialogContent__InformationTitleContainerContentSVG = s
   width: 1.6em;
   fill: currentColor;
   display: inline-block;
+`;
+
+export const ShowProfile__DialogContent__ContainerContentLink = styled.a`
+  outline-style: none;
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  flex-direction: row;
+  width: 100%;
+  padding: 16px;
+  align-items: stretch;
+  border: 0px solid black;
+  flex-basis: auto;
+  border-top: 1px solid rgb(93, 114, 144);
+  flex-shrink: 0;
+  margin: 0;
+  min-height: 0;
+  min-width: 0;
+  position: relative;
+`;
+
+export const ShowProfile__DialogContent__ContainerContentLinkContent = styled.div`
+  display: flex;
+  flex-shrink: 1;
+  flex-grow: 1;
+  align-items: stretch;
+  border: 0px solid black;
+  flex-basis: auto;
+  margin: 0;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  position: relative;
+  cursor: pointer;
+`;
+
+export const ShowProfile__DialogContent__ContainerContentLinkContentMessage = styled.div`
+  font-weight: 400;
+  font-size: 15px;
+  color: #dee3ea;
+  line-height: 20px;
+  overflow-wrap: break-word;
+  min-width: 0px;
+  border: 0px solid black;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  white-space: pre-wrap;
+  font-family: Inter-Regular;
+`;
+
+export const ShowProfile__DialogContent__ContainerContentLinkContentMessageSpan = styled.span`
+  font-family: inherit;
+  overflow-wrap: break-word;
+  min-width: 0px;
+  color: inherit;
+  white-space: inherit;
+  border: 0px solid black;
+  margin: 0;
+  display: inline;
+  padding: 0;
 `;
