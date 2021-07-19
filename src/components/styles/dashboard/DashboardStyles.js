@@ -607,7 +607,6 @@ export const DashboardNavLink__ContainerTitlesSPAN = styled.span`
   padding: 0px;
   cursor: pointer;
   position: relative;
-  top: 2px;
   left: 10px;
   text-align: center;
   list-style: outside none none;
@@ -739,7 +738,7 @@ export const TweetButtonLink__ContentSPAN = styled.span`
 
 export const TweetButtonLink__ContentSPANChild = styled.span`
   font-family: inherit;
-  overflow-wrap: break-break-word;
+  overflow-wrap: break-word;
   color: inherit;
   white-space: inherit;
   border: 0px solid black;
@@ -749,6 +748,7 @@ export const TweetButtonLink__ContentSPANChild = styled.span`
   text-align: center;
   cursor: pointer;
   list-style: outside none none;
+  letter-spacing: 0.5px;
 `;
 
 export const Dashboard__HeaderSecondContainer = styled.div`
@@ -982,6 +982,7 @@ export const Dashboard__HeaderContainerTitleContentFirstContentSPANCONTENT = sty
   display: inline;
   margin: 0px;
   padding: 0px;
+  letter-spacing: 1px;
   cursor: pointer;
 `;
 
