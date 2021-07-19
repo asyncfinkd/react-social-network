@@ -797,6 +797,10 @@ export const Dashboard__HeaderSecondContentContainer = styled.div`
   flex-basis: auto;
   position: relative;
   cursor: pointer;
+
+  &:hover {
+    background-color: rgba(253, 77, 77, 0.1);
+  }
 `;
 
 export const Dashboard__HeaderSecontContainerLogo = styled.div`
