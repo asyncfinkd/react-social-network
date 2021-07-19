@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components/macro";
 
 const SpinnerAnimation = keyframes`
 0% {
@@ -439,10 +439,10 @@ export const Dashboard__LogoContainerLinkContainer = styled.div`
   display: flex;
   border: 0px solid black;
   margin: 0px;
-  padding: 0px;
   white-space: pre-wrap;
   cursor: pointer;
   list-style: outside none none;
+  padding-left: 12px;
 `;
 
 export const Dashboard__LogoContainerLinkContainerSVG = styled.svg`
@@ -511,7 +511,12 @@ export const Dashboard__HeroContainer__NavLink = styled.a`
   position: relative;
   list-style: outside none none;
   text-align: inherit;
+  border-radius: 9999px;
   color: inherit;
+
+  &:hover {
+    background-color: rgba(253, 77, 77, 0.1);
+  }
 `;
 
 export const Dashboard__HeroContainer__NavLinkContainer = styled.div`
@@ -522,7 +527,7 @@ export const Dashboard__HeroContainer__NavLinkContainer = styled.div`
   justify-content: center;
   flex-direction: row;
   max-width: 100%;
-  padding: 12px 0px;
+  padding: 12px;
   border-radius: 9999px;
   border: 0px solid black;
   flex-shrink: 0;
@@ -609,7 +614,7 @@ export const DashboardNavLink__ContainerTitlesSPAN = styled.span`
 `;
 
 export const TweetButton = styled.div`
-  width: 90%;
+  width: 100%;
   margin-top: 16px;
   margin-bottom: 16px;
   border: 0px solid black;
@@ -1115,6 +1120,10 @@ export const IndexDashboard__MainContentContainerContent__Feed = styled.div`
   flex-basis: auto;
   flex-direction: column;
   flex-shrink: 0;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-color: #242c37;
   padding: 0px;
   min-width: 0px;
   min-height: 0px;
@@ -1275,7 +1284,7 @@ export const IndexDashboard__MainContentContainerContent__FeedContent__TitleChil
   text-overflow: ellipsis;
   white-space: nowrap;
   border: 0px solid black;
-  font-family: Inter-Regular;
+  font-family: Inter-Bold;
   display: inline;
   margin: 0;
   padding: 0;
