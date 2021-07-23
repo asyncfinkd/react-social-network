@@ -445,7 +445,7 @@ export default function IndexDashboard() {
                                           <Styled.ShowProfile__DialogContent__ContainerContentLIDIV>
                                             <Styled.ShowProfile__DialogContent__ContainerContentLIDIVAvatar>
                                               <Styled.ShowProfile__DialogContent__ContainerContentLIDIVAvatarContent>
-                                                <Styled.ShowProfile__DialogContent__ContainerContentLIDIVAvatarContentDIVChildImageContent src="https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png" />
+                                                <Styled.ShowProfile__DialogContent__ContainerContentLIDIVAvatarContentDIVChildImageContent src="https://scontent.ftbs2-1.fna.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?_nc_cat=1&ccb=1-3&_nc_sid=7206a8&_nc_ohc=nyKhkR6NhPQAX-jQZM1&_nc_ht=scontent.ftbs2-1.fna&oh=be2e6b35c6c1de53b9af83750ddf81ce&oe=611F51F8" />
                                               </Styled.ShowProfile__DialogContent__ContainerContentLIDIVAvatarContent>
                                             </Styled.ShowProfile__DialogContent__ContainerContentLIDIVAvatar>
                                             <Styled.ShowProfile__DialogContent__InformationTitle>

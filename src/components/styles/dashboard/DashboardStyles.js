@@ -870,7 +870,7 @@ export const DashbordHeader__ContainerContent__LogoContent = styled.div`
 `;
 
 export const IMAGEDashboard__Header = styled.div`
-  background-image: url("https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png");
+  background-image: url("https://scontent.ftbs2-1.fna.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?_nc_cat=1&ccb=1-3&_nc_sid=7206a8&_nc_ohc=nyKhkR6NhPQAX-jQZM1&_nc_ht=scontent.ftbs2-1.fna&oh=be2e6b35c6c1de53b9af83750ddf81ce&oe=611F51F8");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -982,7 +982,6 @@ export const Dashboard__HeaderContainerTitleContentFirstContentSPANCONTENT = sty
   display: inline;
   margin: 0px;
   padding: 0px;
-  letter-spacing: 1px;
   cursor: pointer;
 `;
 
@@ -1809,7 +1808,6 @@ export const ShowProfile__DialogContent__InformationTitleContainerContentFirstTe
   color: inherit;
   white-space: inherit;
   border: 0px solid black;
-  letter-spacing: 1px;
   display: inline;
   margin: 0;
   padding: 0;
