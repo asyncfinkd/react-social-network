@@ -1497,7 +1497,7 @@ export const ShowProfile__Container = styled.div`
   pointer-events: none;
   border: 0px solid black;
   display: flex;
-  z-index: 999;
+  z-index: 999999999999;
   flex-basis: auto;
   flex-direction: column;
   flex-shrink: 0;
