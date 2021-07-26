@@ -434,11 +434,6 @@ export default function IndexDashboard() {
                     <Styled.Dashboard__HeaderSecondContainer>
                       {showProfile && (
                         <>
-                          {/* <Styled.ShowMore__BackgroundFixed
-                            onClick={() => {
-                              setShowProfile(!showProfile);
-                            }}
-                          ></Styled.ShowMore__BackgroundFixed> */}
                           <Styled.ShowProfile__Container>
                             <Styled.ShowProfile__Content>
                               <Styled.ShowProfile__Dialog role="dialog">
