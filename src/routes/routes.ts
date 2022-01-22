@@ -1,6 +1,8 @@
 export const AuthedRoutes = {
   index: '/',
   singlePost: '/posts/:postId',
+  friends: '/friends',
+  friendsRequest: '/friends/request',
 }
 
 export const UnAuthedRoutes = {

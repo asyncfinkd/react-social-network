@@ -152,3 +152,57 @@ export const SUBMIT_COMMENT_MUTATION = gql`
     }
   }
 `
+
+export const GET_USERS_QUERY = gql`
+  query {
+    getUsers {
+      email
+      createdAt
+      id
+      username
+      friends {
+        status
+        username
+        _id
+      }
+    }
+  }
+`
+
+export const ADD_FRIEND_MUTATION = gql`
+  mutation ($userId: ID!) {
+    addFriend(userId: $userId) {
+      friends {
+        status
+      }
+    }
+  }
+`
+
+export const REMOVE_FRIEND_MUTATION = gql`
+  mutation ($userId: ID!, $friendId: ID!) {
+    removeFriend(userId: $userId, friendId: $friendId) {
+      email
+    }
+  }
+`
+
+export const GET_FRIEND_REQUESTS_QUERY = gql`
+  query {
+    getFriendRequests {
+      username
+      createdAt
+      _id
+    }
+  }
+`
+
+export const ACCEPT_FRIEND_REQUEST_MUTATION = gql`
+  mutation ($friendId: ID!) {
+    acceptFriendRequest(friendId: $friendId) {
+      friends {
+        status
+      }
+    }
+  }
+`

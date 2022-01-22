@@ -12,6 +12,16 @@ export const AuthedRoutesData = [
     path: routes.singlePost,
     component: lazy(() => import('pages/posts/[postId]')),
   },
+  {
+    title: 'Friends',
+    path: routes.friends,
+    component: lazy(() => import('pages/friends')),
+  },
+  {
+    title: 'Friends Request',
+    path: routes.friendsRequest,
+    component: lazy(() => import('pages/friends/request')),
+  },
 ]
 
 export const UnAuthedRoutesData = [

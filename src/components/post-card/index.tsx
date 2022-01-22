@@ -1,7 +1,7 @@
 import moment from 'moment'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Button, Card, Icon, Image, Label, Popup } from 'semantic-ui-react'
+import { Button, Card, Icon, Image, Label } from 'semantic-ui-react'
 import { AuthContext } from 'context/auth'
 import LikeButton from 'components/like-button'
 import DeleteButton from 'components/delete-button'
