@@ -7,6 +7,11 @@ export const AuthedRoutesData = [
     path: routes.index,
     component: lazy(() => import('pages/index')),
   },
+  {
+    title: 'Posts Detail',
+    path: routes.singlePost,
+    component: lazy(() => import('pages/posts/[postId]')),
+  },
 ]
 
 export const UnAuthedRoutesData = [
@@ -24,6 +29,11 @@ export const UnAuthedRoutesData = [
     title: 'Login',
     path: routes.login,
     component: lazy(() => import('pages/login')),
+  },
+  {
+    title: 'Posts Detail',
+    path: routes.singlePost,
+    component: lazy(() => import('pages/posts/[postId]')),
   },
 ]
 

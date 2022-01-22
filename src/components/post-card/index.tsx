@@ -1,9 +1,11 @@
 import moment from 'moment'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Button, Card, Icon, Image, Label } from 'semantic-ui-react'
+import { Button, Card, Icon, Image, Label, Popup } from 'semantic-ui-react'
 import { AuthContext } from 'context/auth'
 import LikeButton from 'components/like-button'
+import DeleteButton from 'components/delete-button'
+import MyPopup from 'util/popup'
 
 export default function PostCard({
   post: { body, createdAt, id, username, likeCount, commentCount, likes },
@@ -28,26 +30,17 @@ export default function PostCard({
         <Card.Content extra>
           <LikeButton post={{ id, likes, likeCount }} user={user} />
 
-          <Button labelPosition="right" as={Link} to={`/posts/${id}`}>
-            <Button color="blue" basic>
-              <Icon name="comments" style={{ margin: 0 }} />
-            </Button>
-            <Label basic color="blue" pointing="left" floated="right">
-              {commentCount}
-            </Label>
-          </Button>
-          {user && user.username === username && (
-            <>
-              <Button
-                as="div"
-                color="red"
-                onClick={() => console.log('Delete post')}
-                floated="right"
-              >
-                <Icon name="trash" style={{ margin: 0 }} />
+          <MyPopup content="Comment on post">
+            <Button labelPosition="right" as={Link} to={`/posts/${id}`}>
+              <Button color="blue" basic>
+                <Icon name="comments" style={{ margin: 0 }} />
               </Button>
-            </>
-          )}
+              <Label basic color="blue" pointing="left" floated="right">
+                {commentCount}
+              </Label>
+            </Button>
+          </MyPopup>
+          {user && user.username === username && <DeleteButton postId={id} />}
         </Card.Content>
       </Card>
     </>
