@@ -20,6 +20,11 @@ export const UnAuthedRoutesData = [
     path: routes.register,
     component: lazy(() => import('pages/register')),
   },
+  {
+    title: 'Login',
+    path: routes.login,
+    component: lazy(() => import('pages/login')),
+  },
 ]
 
 export const authRoutes = [...AuthedRoutesData]

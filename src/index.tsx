@@ -8,9 +8,12 @@ import MenuBar from 'ui/menu-bar'
 import { Container } from 'semantic-ui-react'
 import { ApolloProvider } from '@apollo/client'
 import client from 'apollo/provider'
+import { AuthProvider, AuthContext } from 'context/auth'
 
 const IndexPage = () => {
-  if (!localStorage.getItem('token')) {
+  const context = React.useContext(AuthContext)
+
+  if (context.user === null && !localStorage.getItem('jwtToken')) {
     return (
       <Routes>
         {unAuthRoutes.map((el) => {
@@ -34,16 +37,18 @@ const IndexPage = () => {
 
 ReactDOM.render(
   <React.StrictMode>
-    <ApolloProvider client={client}>
-      <BrowserRouter>
-        <Suspense fallback={false}>
-          <Container>
-            <MenuBar />
-            <IndexPage />
-          </Container>
-        </Suspense>
-      </BrowserRouter>
-    </ApolloProvider>
+    <AuthProvider>
+      <ApolloProvider client={client}>
+        <BrowserRouter>
+          <Suspense fallback={false}>
+            <Container>
+              <MenuBar />
+              <IndexPage />
+            </Container>
+          </Suspense>
+        </BrowserRouter>
+      </ApolloProvider>
+    </AuthProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )

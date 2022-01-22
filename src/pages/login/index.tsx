@@ -1,12 +1,12 @@
 import React from 'react'
 import { Button, Form } from 'semantic-ui-react'
 import { useMutation } from '@apollo/client'
-import { REGISTER_USER } from 'graphql/queries'
+import { LOGIN_USER } from 'graphql/queries'
 import { useNavigate } from 'react-router-dom'
 import { useForm } from 'util/hooks'
 import { AuthContext } from 'context/auth'
 
-export default function RegisterPage() {
+export default function LoginPage() {
   const context = React.useContext(AuthContext)
   const navigate = useNavigate()
 
@@ -15,12 +15,10 @@ export default function RegisterPage() {
   const { onChange, onSubmit, values } = useForm(registerUser, {
     username: '',
     password: '',
-    email: '',
-    confirmPassword: '',
   })
 
-  const [addUser, { loading }] = useMutation(REGISTER_USER, {
-    update(proxy, { data: { register: userData } }) {
+  const [loginUser, { loading }] = useMutation(LOGIN_USER, {
+    update(proxy, { data: { login: userData } }) {
       context.login(userData)
       navigate('/')
     },
@@ -32,7 +30,7 @@ export default function RegisterPage() {
   })
 
   function registerUser() {
-    addUser()
+    loginUser()
   }
   return (
     <>
@@ -42,7 +40,7 @@ export default function RegisterPage() {
           novalidate
           className={loading ? 'loading' : ''}
         >
-          <h1>Register</h1>
+          <h1>Login</h1>
           {/* react-hook-form */}
           <Form.Input
             label="Username"
@@ -55,16 +53,6 @@ export default function RegisterPage() {
             error={errors.username ? true : false}
           />
           <Form.Input
-            label="Email"
-            placeholder="Email..."
-            name="email"
-            value={values.email}
-            onChange={onChange}
-            type="email"
-            // @ts-ignore
-            error={errors.email ? true : false}
-          />
-          <Form.Input
             label="Password"
             placeholder="Password..."
             name="password"
@@ -74,18 +62,8 @@ export default function RegisterPage() {
             // @ts-ignore
             error={errors.password ? true : false}
           />
-          <Form.Input
-            label="Confirm Password"
-            placeholder="Confirm Password..."
-            name="confirmPassword"
-            value={values.confirmPassword}
-            onChange={onChange}
-            type="password"
-            // @ts-ignore
-            error={errors.confirmPassword ? true : false}
-          />
           <Button type="submit" primary>
-            Register
+            Login
           </Button>
         </Form>
         {Object.keys(errors).length > 0 && (

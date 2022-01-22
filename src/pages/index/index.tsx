@@ -2,9 +2,13 @@ import { useQuery } from '@apollo/client'
 import PostCard from 'components/post-card'
 import { FETCH_POSTS_QUERY } from 'graphql/queries'
 import { Grid, Transition } from 'semantic-ui-react'
+import React from 'react'
+import { AuthContext } from 'context/auth'
+import PostForm from 'components/post-form'
 
 function IndexPage() {
-  const { loading, data } = useQuery(FETCH_POSTS_QUERY)
+  const { user } = React.useContext(AuthContext)
+  let { loading, data } = useQuery(FETCH_POSTS_QUERY)
 
   return (
     <>
@@ -13,6 +17,11 @@ function IndexPage() {
           <h1>Recent Posts</h1>
         </Grid.Row>
         <Grid.Row>
+          {user && (
+            <Grid.Column>
+              <PostForm />
+            </Grid.Column>
+          )}
           {loading ? (
             <h1 style={{ marginLeft: '15px' }}>Loading posts..</h1>
           ) : (
